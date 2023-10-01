@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <form id="nameForm" method="get" action="concat.php">
+            <input type="text" name="firstName">
+            <input type="text" name="lastName">
+            <button type="submit" onclick="display()">
+                Submit
+            </button>
+        </form>
+    </body>
+    <script>
+        function display(){
+            let request = new XMLHttpRequest();
+            request.open("POST", "concat.php");  
+        }
+    </script>
+</html>

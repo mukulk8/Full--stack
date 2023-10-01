@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <?php
+$x=$_POST['fnum'];
+$y=$_POST['snum'];
+$sum=$x+$y;
+?>
+    <form method="post">
+        <hr>Enter first number <input type="text" name="fnum"/>
+        <hr>Enter second number <input type="text" name="snum"/>
+        <hr>Result <input type="text" value="<?php echo @$sum;?>"/>
+        <input type="submit" value="ADD"/>
+
+    </form>
+</body>
+</html>

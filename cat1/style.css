@@ -1,0 +1,96 @@
+/* Reset some default styles */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #780000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    padding: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label, select, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #780000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3385ff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+#pic1{
+    height: 20%;
+    width: 20%;
+}
+#menu{
+    background-color: #c1121f;
+}
+#pic2{
+    height: 15%;
+    width: 15%;
+   
+}
+#pic1{
+    padding-right: 10%;
+    height: 15%;
+    width: 10%;
+}
+#pic3{
+    height: 4%;
+    width: 4%;
+}
+

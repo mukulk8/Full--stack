@@ -1,0 +1,52 @@
+<html>
+
+<body>
+
+    <label>State 1: Gujarat</label>
+    <input type="text" id="state1">
+
+    <label>State 1: Bihar</label>
+    <input type="text" id="state2">
+
+    <label>State 1: Tamil nadu</label>
+    <input type="text" id="state3">
+
+    <button id="btn">Count cases</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let case1 = 0, case2 = 0, case3 = 0;
+        btn.addEventListener("click", function () {
+            let state1Count = document.getElementById("state1").value;
+            let state2Count = document.getElementById("state2").value;
+            let state3Count = document.getElementById("state3").value;
+
+            case1 = case1 + parseInt(state1Count);
+            case2 = case2 + parseInt(state2Count);
+            case3 = case3 + parseInt(state3Count);
+
+            
+            if (case1 > case2 && case1 > case3) {
+                alert("Gujarat has highest cases: " + state1Count)
+            } else if (case2 > case1 && case2 > case3) {
+                alert("Bihar has highest cases");
+            } else if (case3 > case1 && case3 > case2) {
+                alert("Tamilnadu has highest cases");
+            } else {
+                if (case1 == case2 && case1 == case3 && case2 == case3) {
+                    alert("All States");
+                } else if (case1 == case3) {
+                    alert("Gujarat and Tamilnadu" );
+                } else if (case2 == case3) {
+                    alert("Bihar and Tamilnadu");
+                } else if (case1 == case2) {
+                    alert("Bihar and Gujarat");
+                } else {
+                    alert("IDKKKKKK")
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

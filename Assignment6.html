@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play Area Queue</title>
+</head>
+<body style="background-color: #f0b660;">
+<center>
+<h1>Play Area Queue</h1>
+<input type="text" id="childName" placeholder="Enter child's name">
+<button onclick="enterQueue()">Enter</button>
+<button onclick="exitQueue()">Exit</button>
+<h3>Queue:</h3>
+<ul id="queueList"></ul>
+<script>
+const queue = [];
+function enterQueue() {
+const childName = document.getElementById('childName').value;
+if (childName) {
+queue.push(childName);
+displayQueue();
+document.getElementById('childName').value = '';
+}
+}
+function exitQueue() {
+if (queue.length > 0) {
+queue.shift();
+displayQueue();
+}
+}
+function displayQueue() {
+const queueList = document.getElementById('queueList');
+queueList.innerHTML = ''; // Clear the previous list
+for (let i = 0; i < queue.length; i++) {
+const listItem = document.createElement('li');
+listItem.textContent = queue[i];
+queueList.appendChild(listItem);
+}
+}
+</script>
+</center>
+</body>
+</html>

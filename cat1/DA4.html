@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>CNF Hospital</title>
+</head>
+<script>
+ var b;
+ function textbox2()
+ {
+ t1=parseInt(document.getElementById('txt2').value);
+ var a=t1+2;
+ document.getElementById('txt2').value=a;
+ var b=a*2;
+ document.getElementById('txt3').value=b;
+ var c=b+1;
+ document.getElementById('txt4').value=c; 
+ var d=c*5;
+ document.getElementById('txt5').value=d; 
+ var x=d-25;
+ document.getElementById('txt6').value=x; 
+ 
+ if (x >= 10 && x < 100)
+ {
+ var y = x.toString();
+ var bro = parseInt(y.charAt(0));
+ document.getElementById('txt7').value = bro;
+ var sis = parseInt(y.charAt(1));
+ document.getElementById('txt8').value = sis;
+ } 
+ else if (x >= 0 && x < 10)
+ {
+ document.getElementById('txt7').value = 0;
+ document.getElementById('txt8').value = x;
+ } 
+ else if (x == 0) 
+ {
+ document.getElementById('txt7').value = 0;
+ document.getElementById('txt8').value = 0;
+ }
+ 
+ }
+ function result()
+ {
+ m=document.getElementById('txt7').value;
+ n=document.getElementById('txt8').value;
+ if(m==1 && n==0)
+ {
+ div1=document.getElementById('textbox8');
+ op=document.createElement('h3');
+ op1=document.createTextNode("Good memory and problem solving skills");
+ op.appendChild(op1);
+ div1.appendChild(op);
+ }
+ else{
+ div1=document.getElementById('textbox8');
+ op=document.createElement('h3');
+ op1=document.createTextNode("Retardation is memory and problem solving skills");
+ op.appendChild(op1);
+ div1.appendChild(op);
+ }
+ }
+</script>
+<body>
+ <center><h1>Test your cognitive ability</h1>
+ <h3>CNF HOSPITAL</h3>
+ <div id="textbox1">
+ NAME::<input type="text" id="txt1">
+ </div>
+ <br/><br/>
+ <div id="textbox2">
+ BROTHERS::<input type="text" id="txt2"><input type="button" value="click me" 
+id="btn1" onclick="textbox2()">
+ </div>
+ <br/><br/>
+ <div id="textbox3">
+ Textbox 3<input type="text" id="txt3">
+ </div>
+ <br/><br/>
+ <div id="textbox4">
+ Textbox 4<input type="text" id="txt4">
+ </div>
+ <br/><br/>
+ <div id="textbox5">
+ Textbox 5<input type="text" id="txt5">
+ </div>
+ <br/><br/>
+ <div id="textbox6">
+ Textbox 6<input type="text" id="txt6">
+ </div>
+ <br/><br/>
+ <div id="textbox7">
+ Brothers:<input type="text" id="txt7">
+ </div>
+ <br/><br/>
+ <div id="textbox8">
+ Sisters:<input type="text" id="txt8"><input type="button" value="RESULT" 
+onclick="result()">
+ </div>
+</center>
+</body>
+</html>

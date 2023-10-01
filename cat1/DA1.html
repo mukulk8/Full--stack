@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza Delivery</title>
+</head>
+<body>
+    <div>
+       
+    <header>
+        
+        <h1><img id="pic3" src="order.png" alt="">Pizza Delivery</h1>
+    </header>
+</div>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="menu">
+       
+    <div id="menu1">
+        <img id="pic1" src="pizza5.png" alt="">
+        <img id="pic2" src="pizza3.png" alt="">
+        
+    </div>
+    <section id="order">
+        <h2>Order Online</h2>
+        <form>
+            <label for="pizza-type">Select Pizza Type:</label>
+            <select id="pizza-type" name="pizza-type">
+                <option value="cheese">Cheese Pizza</option>
+                <option value="pepperoni">Pepperoni Pizza</option>
+                <option value="veggie">Veggie Pizza</option>
+                <option value="Chicken">Chicken Pizza</option>
+               
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <label for="Address">Address:</label>
+            <input type="text" id="name" name="name" required minlength="10" maxlength="100" size="50" />
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Contact us at:</p>
+        <address>
+            Email: <a href="mailto:vit@pizzadelivery.com">vit@pizzadelivery.com</a><br>
+            Phone: <a href="tel:xxxxxxxx">+91 0000000000</a>
+        </address>
+    </section>
+    <footer>
+        <p>&copy; 2023 Pizza Delivery</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>IPL AUCTION</title>
+</head>
+<body>
+ <h1 id="heading1">IPL Auction 2023 &nbsp;&nbsp;&nbsp;</h1>
+ <button onclick="getDate()">Edit Date</button>
+ <br><br>
+ <div>
+ <h2>Player List</h2>
+ <input type="text" id="newPlayer" placeholder="Enter a new Player">
+ <button onclick="addPlayer()">Add Player</button>
+ <p id="PlayerList">
+ </p>
+ </div>
+ <div>
+ <h2>Newly Added Batsman</h2>
+ <input type="text" id="newBatsman1" placeholder="Enter first Batsman 
+1">
+ <input type="text" id="newBatsman2" placeholder="Enter second 
+Batsman 1">
+ <button onclick="replacePlayer()">Replace Player</button>
+ <ul id="batsmanList">
+ <li>Batsman 1</li>
+ <li>Batsman 2</li>
+ </ul>
+ </div>
+ <div>
+ <h2>Dropped Bowler</h2>
+ <button onclick="dropBowler()">Drop Bowler</button>
+ <ul id="bowlerList">
+ <li>Bowler 1</li>
+ <li>Bowler 2</li>
+ <li>Bowler 3</li>
+ </ul>
+ </div>
+ <script>
+ function getDate(){
+ const currentDate=new Date().toLocaleDateString();
+ document.getElementById("heading1").append(currentDate);
+ }
+ 
+ function addPlayer(){
+ const newPlayer=document.getElementById('newPlayer').value;
+ const playerList=document.getElementById('PlayerList');
+ const playerItem=document.createElement('p');
+ playerItem.textContent=newPlayer;
+ playerList.appendChild(playerItem)
+ 
+ }
+ function replacePlayer(){
+ const batsman1=document.getElementById('newBatsman1').value;
+ const batsman2=document.getElementById('newBatsman2').value;
+ const listItem=document.getElementsByTagName('li')
+ listItem[0].textContent=batsman1;
+ listItem[1].textContent=batsman2;
+ }
+ function dropBowler(){
+ const bowlerList1=document.getElementById('bowlerList')
+ const bowlerListItems=document.getElementsByTagName('li');
+ if(bowlerListItems.length>0)
+ {
+ bowlerList1.removeChild(bowlerListItems[bowlerListItems.length-1])
+ 
+ }
+ }
+ </script>
+</body>
+</html>
